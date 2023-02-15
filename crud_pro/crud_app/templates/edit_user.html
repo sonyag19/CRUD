@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>EDIT USER</h1>
+<form method="post" action="http://127.0.0.1:8000/crud/update/{{employee.id}}">{% csrf_token %}
+  <table>
+      <tr>
+          <td>ID<input name="eid" value="{{employee.eid}}"></td>
+      </tr>
+      <tr>
+          <td>NAME<input name="ename" value="{{employee.ename}}"></td>
+      </tr>
+      <tr>
+          <td>E-Mail<input name="eemail" value="{{employee.eemail}}"></td>
+      </tr>
+      <tr>
+          <td>Contact<input name="econtact" value="{{employee.econtact}}"></td>
+      </tr>
+      <tr>
+          <td>
+              <button type="submit">UPDATE</button>
+          </td>
+      </tr>
+  </table>
+</form>
+</body>
+</html>

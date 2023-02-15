@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <input type="text" name="iname" placeholder="item name"><br><br>
+    <textarea name="des" rows="5"></textarea><br><br>
+    <input type="number" name="price" placeholder="item price"><br><br>
+
+    <input type="file" name="image"><br><br>
+    <input type="submit">
+</form>
+</body>
+</html>

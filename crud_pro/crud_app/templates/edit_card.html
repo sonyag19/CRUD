@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>EDIT CARD</h1>
+<form method="post" action="http://127.0.0.1:8000/crud/update_card/{{reg.id}}">{% csrf_token %}
+    <table>
+      <tr>
+          <td>First Name<input name="fname" value="{{reg.fname}}"></td>
+      </tr>
+      <tr>
+          <td>Last Name<input name="lname" value="{{reg.lname}}"></td>
+      </tr>
+      <tr>
+          <td>User Name<input name="uname" value="{{reg.uname}}"></td>
+      </tr>
+      <tr>
+          <td>Phone Number<input name="phone" value="{{reg.phone}}"></td>
+      </tr>
+        <tr>
+          <td>Password<input name="password" value="{{reg.password}}"></td>
+      </tr>
+        <br>
+      <tr>
+          <td>
+              <button type="submit">UPDATE CARD</button>
+          </td>
+      </tr>
+  </table>
+</form>
+</body>
+</html>

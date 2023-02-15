@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+<h1> Display Items</h1>
+<br><br>
+<table border="1">
+  <tr>
+    <th>Item Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Image</th>
+  </tr>
+  {% for i,j,k,l,m in mylist %}
+  <tr>
+    <td>{{i}}</td>
+    <td>{{j}}</td>
+    <td>{{k}}</td>
+    <td><img src="{% static l %}" height="100px" width="100px"></td>
+    <td>
+    <a href="http://127.0.0.1:8000/crud/edit_item/{{m}}" class="btn btn-success">EDIT</a>
+          <a href="http://127.0.0.1:8000/crud/delete_item/{{m}}" class="btn btn-danger">DELETE</a>
+      </td>
+    {% endfor %}
+  </tr>
+</table>
+<br>
+<a href="http://127.0.0.1:8000/crud/add_item/">Back to Home</a>
+</body>
+</html>

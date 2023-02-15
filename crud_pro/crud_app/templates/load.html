@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="http://127.0.0.1:8000/crud/submit">{% csrf_token %}
+    <h1>ADD USER</h1>
+    <label>First Name</label>
+    <div>{{form.fname}}</div>
+    <label>Last Name</label>
+    <div>{{form.lname}}</div>
+    <label>User Name</label>
+    <div>{{form.uname}}</div>
+    <label>Phone Number</label>
+    <div>{{form.phone}}</div>
+    <label>Password</label>
+    <div>{{form.password}}</div><br>
+    <div>
+        <button type="submit">SUBMIT</button>
+    </div>
+</form>
+</body>
+</html>

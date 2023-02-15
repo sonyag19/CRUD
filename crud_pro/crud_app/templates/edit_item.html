@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+<form method="POST" enctype="multipart/form-data" >{% csrf_token %}
+    <input type="text" name="iname" placeholder="Name" value="{{prod.iname}}"><br>
+    <input type="text" name="des" placeholder="Description" value="{{prod.des}}"><br>
+    <input type="number" name="price" placeholder="Place" value="{{prod.price}}"><br>
+    <button type="submit" class="btn btn-warning">UPDATE</button>
+    {% if prod.image %}
+        <img src="{% static li %}" width="200px" height="200px">
+    {% endif %}
+    <input type="file" name="image">
+</form>
+<a href="">Back to Home</a>
+</body>
+</html>
